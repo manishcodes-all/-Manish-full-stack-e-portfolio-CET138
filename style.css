@@ -1,0 +1,232 @@
+/* --- Custom CSS --- */
+:root{
+  --brand: #0d6efd;
+  --muted: #6c757d;
+}
+/* Custom Navbar Colors */
+.navbar-nav .nav-link[href="#what"] {
+  color: black; /* optional, default color */
+}
+
+.navbar-nav .nav-link[href="#html"] {
+  color: blue;
+}
+
+.navbar-nav .nav-link[href="#css"] {
+  color: green;
+}
+
+.navbar-nav .nav-link[href="#bootstrap"] {
+  color: skyblue;
+}
+
+.navbar-nav .nav-link[href="#js"] {
+  color: orange;
+}
+
+/* Optional: hover effect */
+.navbar-nav .nav-link:hover {
+  opacity: 0.7;
+}
+
+body{
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  padding-top:70px;
+}
+.hero{
+  background: linear-gradient(180deg, rgba(13,110,253,0.08), rgba(13,110,253,0.02));
+  padding:40px 0
+}
+.demo-box{
+  border:1px dashed var(--muted);
+  padding:18px;
+  border-radius:8px;
+  background:#fff
+}
+pre code{
+  white-space:pre-wrap;
+  word-break:break-word
+}
+.grid-demo{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:12px
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+footer{
+  padding:24px 0;
+  border-top:1px solid #e9ecef;
+  margin-top:36px
+}
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+/* Flexbox card example */
+.card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+/* CSS Grid responsive layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+/* Snake Game styles */
+#snake-container table {
+  border: 5px solid red;
+  margin-top: 10px;
+}
+
+#snake-container td {
+  height: 25px;
+  width: 25px;
+}
+
+#snake-container .active {
+  background-color: black;
+}
+
+#snake-container .food {
+  background-color: #16f55b;
+}
+/* Container for all 4 grids in one line */
+.four-grids-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Make each grid container smaller to fit in line */
+.grid-demo-small {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+}
+
+/* Grid Style 1 - Blue Tech */
+.grid-demo-1 {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  border: 2px solid #2196f3;
+}
+
+.grid-item-1 {
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+  color: white;
+  padding: 0.8rem;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.grid-item-1:hover {
+  transform: scale(1.05);
+}
+
+/* Grid Style 2 - Green Nature */
+.grid-demo-2 {
+  background: linear-gradient(45deg, #e8f5e8, #c8e6c9);
+  border: 2px solid #4caf50;
+}
+
+.grid-item-2 {
+  background: linear-gradient(45deg, #66bb6a, #4caf50);
+  color: white;
+  padding: 0.8rem;
+  text-align: center;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.grid-item-2:hover {
+  transform: rotate(-5deg);
+}
+
+/* Grid Style 3 - Purple Dark */
+.grid-demo-3 {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border: 2px solid #9c27b0;
+}
+
+.grid-item-3 {
+  background: linear-gradient(135deg, #9c27b0, #673ab7);
+  color: white;
+  padding: 0.8rem;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.grid-item-3:hover {
+  box-shadow: 0 5px 15px rgba(156, 39, 176, 0.5);
+  transform: translateY(-3px);
+}
+
+/* Grid Style 4 - Orange Minimal */
+.grid-demo-4 {
+  background: white;
+  border: 3px solid #ff9800;
+}
+
+.grid-item-4 {
+  background: white;
+  color: #ff9800;
+  padding: 0.8rem;
+  text-align: center;
+  border: 2px solid #ff9800;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-item-4::before {
+  content: '';
+  position: Center;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ff9800;
+  transition: top 0.3s ease;
+  z-index: -1;
+}
+
+.grid-item-4:hover {
+  color: white;
+}
+
+.grid-item-4:hover::before {
+  top: 0;
+}
+
+/* Responsive - stack on smaller screens */
+@media (max-width: 992px) {
+  .four-grids-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .four-grids-container {
+    grid-template-columns: 1fr;
+  }
+}
